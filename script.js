@@ -1,25 +1,20 @@
-// The banner is fixed at the top, so push the whole page down by its height
-// plus a little breathing room. Re-measure on resize (the nav can wrap) and
-// after the web font loads (which can change the banner's height).
-var BANNER_GAP = 24; // extra space below the banner, in pixels
-function offsetForBanner() {
+// Measure the fixed banner and expose its height as the --banner-h CSS
+// variable. The stylesheet uses that single value for both the page's top
+// offset and the anchor-scroll spacing, so nav links line up correctly.
+// Re-measure on resize (the nav can wrap) and after the web font loads
+// (which can change the banner's height).
+function measureBanner() {
   var header = document.querySelector('.site-header');
-  document.body.style.paddingTop = (header.offsetHeight + BANNER_GAP) + 'px';
+  document.documentElement.style.setProperty('--banner-h', header.offsetHeight + 'px');
 }
-offsetForBanner();
-window.addEventListener('resize', offsetForBanner);
-window.addEventListener('load', offsetForBanner);
+measureBanner();
+window.addEventListener('resize', measureBanner);
+window.addEventListener('load', measureBanner);
 if (document.fonts && document.fonts.ready) {
-  document.fonts.ready.then(offsetForBanner);
+  document.fonts.ready.then(measureBanner);
 }
 
 // Hide the photo if it fails to load (instead of showing a broken image).
 document.getElementById('avatar-img').addEventListener('error', function () {
   this.style.display = 'none';
-});
-
-// "About" link smoothly returns to the top of the page.
-document.getElementById('about-link').addEventListener('click', function (e) {
-  e.preventDefault();
-  window.scrollTo(0, 0);
 });

@@ -1,5 +1,11 @@
 /* ---------- Base ---------- */
+:root {
+  /* Height of the fixed banner. JS overwrites this with the real measured
+     value; the number here is only a fallback before the script runs. */
+  --banner-h: 80px;
+}
 * { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: 'IBM Plex Sans', -apple-system, system-ui, sans-serif;
@@ -8,6 +14,8 @@ body {
   line-height: 1.6;
   background: #fdfdfd;
   -webkit-font-smoothing: antialiased;
+  /* Push the whole page below the fixed banner. */
+  padding-top: var(--banner-h);
 }
 a { color: #1a56db; }
 .container {
@@ -51,6 +59,9 @@ a { color: #1a56db; }
 /* ---------- Main layout ---------- */
 main { padding-top: 40px; padding-bottom: 64px; }
 section { margin-bottom: 48px; }
+/* When a nav link jumps to a section, stop below the fixed banner instead of
+   scrolling the section up behind it. */
+main, section[id] { scroll-margin-top: var(--banner-h); }
 .section-title {
   font-size: 22px;
   margin: 0 0 18px;
