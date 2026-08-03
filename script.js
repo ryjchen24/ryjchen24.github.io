@@ -1,11 +1,17 @@
-// The banner is fixed at the top, so push the whole page down by exactly its
-// height. Re-measure on resize since the nav can wrap and change that height.
+// The banner is fixed at the top, so push the whole page down by its height
+// plus a little breathing room. Re-measure on resize (the nav can wrap) and
+// after the web font loads (which can change the banner's height).
+var BANNER_GAP = 24; // extra space below the banner, in pixels
 function offsetForBanner() {
   var header = document.querySelector('.site-header');
-  document.body.style.paddingTop = header.offsetHeight + 'px';
+  document.body.style.paddingTop = (header.offsetHeight + BANNER_GAP) + 'px';
 }
 offsetForBanner();
 window.addEventListener('resize', offsetForBanner);
+window.addEventListener('load', offsetForBanner);
+if (document.fonts && document.fonts.ready) {
+  document.fonts.ready.then(offsetForBanner);
+}
 
 // Hide the photo if it fails to load (instead of showing a broken image).
 document.getElementById('avatar-img').addEventListener('error', function () {
