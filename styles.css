@@ -70,11 +70,13 @@ main, section[id] { scroll-margin-top: var(--banner-h); }
 }
 
 /* ---------- About ---------- */
+#about { margin-bottom: 24px; } /* smaller gap before the Now section */
 .about-row {
   display: flex;
   align-items: flex-start;
   gap: 24px;
   flex-wrap: wrap;
+  padding-top: 28px; /* push the photo and text down together */
 }
 .avatar {
   position: relative;
