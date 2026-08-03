@@ -1,3 +1,12 @@
+// The banner is fixed at the top, so push the whole page down by exactly its
+// height. Re-measure on resize since the nav can wrap and change that height.
+function offsetForBanner() {
+  var header = document.querySelector('.site-header');
+  document.body.style.paddingTop = header.offsetHeight + 'px';
+}
+offsetForBanner();
+window.addEventListener('resize', offsetForBanner);
+
 // Hide the photo if it fails to load (instead of showing a broken image).
 document.getElementById('avatar-img').addEventListener('error', function () {
   this.style.display = 'none';
