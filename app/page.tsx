@@ -84,6 +84,25 @@ const experience: Project[] = [
   },
 ];
 
+const hackathons: Project[] = [
+  {
+    title: "Muve",
+    description: "A tool that tells you whether a home is actually livable for you before you ever tour it. You give it an address and describe what you need, and it pulls the listing photos, reads every one of them for things like entry stairs, tight doorways, and narrow hallways, and hands back a scored accessibility report. Built for IrvineHacks 2026 with React, TypeScript, and Google Gemini vision.",
+    images: ["/muve1.svg"],
+    github: "https://github.com/ParzivalPerhaps/muve",
+    color: "#2f6a7d",
+    dark: true,
+  },
+  {
+    title: "AlterEgo",
+    description: "A future simulator that takes who you are today, your work, your hours, your ambitions, your fears, and walks it twenty years forward, then lets you talk to the person waiting at the other end in your own aged voice. You can rewind to any year, change one decision, and watch the rest of the timeline rewrite itself. Built for LA Hacks 2026 with React, FastAPI, Claude, ElevenLabs, and Gemini.",
+    images: ["/alterego1.svg"],
+    github: "https://github.com/SVAH-X/AlterEgo",
+    color: "#4c3d75",
+    dark: true,
+  },
+];
+
 function Links({ project, dark }: { project: Project; dark: boolean }) {
   const filter = dark ? "invert" : "";
   return (
@@ -155,6 +174,7 @@ export default function Home() {
         <a href="#bio" className="hover:underline">Bio</a>
         <a href="#projects" className="hover:underline">Projects</a>
         <a href="#experience" className="hover:underline">Experience</a>
+        <a href="#hackathons" className="hover:underline">Hackathons</a>
         <a href="#contact" className="hover:underline">Contact</a>
       </nav>
 
@@ -244,9 +264,22 @@ export default function Home() {
             {experience[index + 1] && <Gradient from={project.color} to={experience[index + 1].color} />}
           </div>
         ))}
+        <Gradient from={experience[experience.length - 1].color} to={hackathons[0].color} height="h-24" />
       </section>
 
-      <Gradient from={experience[experience.length - 1].color} to="#191c23" />
+      <section>
+        <div id="hackathons" className="flex min-h-screen items-center justify-center bg-[#2f6a7d] px-6">
+          <h2 className="text-center text-5xl font-semibold text-white sm:text-6xl">Hackathons</h2>
+        </div>
+        {hackathons.map((project, index) => (
+          <div key={project.title}>
+            <ProjectSection project={project} />
+            {hackathons[index + 1] && <Gradient from={project.color} to={hackathons[index + 1].color} />}
+          </div>
+        ))}
+      </section>
+
+      <Gradient from={hackathons[hackathons.length - 1].color} to="#191c23" />
 
       <section id="contact" className="flex min-h-screen flex-col items-center justify-center bg-[#191c23] px-6 py-28 text-white">
         <div className="w-full max-w-2xl rounded-lg bg-[#0f1015] p-8 text-center shadow-2xl sm:p-12">
