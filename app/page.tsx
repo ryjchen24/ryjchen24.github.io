@@ -17,13 +17,14 @@ const projects: Project[] = [
   {
     title: "AMO",
     description: "An AI studying and note-taking platform where you can chat with several models at once, drop in your own API keys, and sign in with Google, all in one place. Built with React, FastAPI, PostgreSQL, and Docker.",
-    images: ["/projects/amo/amo1.svg", "/projects/amo/amo2.svg", "/projects/amo/amo3.svg"],
+    images: ["/projects/amo/amo1.png", "/projects/amo/amo2.png", "/projects/amo/amo3.png"],
     github: "https://github.com/ryjchen24",
     live: "https://amo-xt5x.onrender.com",
     color: "#4f6d7a",
     gradientTo: "#2b4562",
     dark: true,
     gallery: true,
+    contain: true,
   },
   {
     title: "neural network from scratch",
