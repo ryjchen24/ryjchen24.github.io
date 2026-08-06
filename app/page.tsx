@@ -16,7 +16,7 @@ const projects: Project[] = [
   {
     title: "AMO",
     description: "An AI studying and note-taking platform where you can chat with several models at once, drop in your own API keys, and sign in with Google, all in one place. Built with React, FastAPI, PostgreSQL, and Docker.",
-    images: ["/amo1.svg", "/amo2.svg", "/amo3.svg"],
+    images: ["/projects/amo/amo1.svg", "/projects/amo/amo2.svg", "/projects/amo/amo3.svg"],
     github: "https://github.com/ryjchen24",
     live: "https://amo-xt5x.onrender.com",
     color: "#4f6d7a",
@@ -27,7 +27,7 @@ const projects: Project[] = [
   {
     title: "neural network from scratch",
     description: "A neural network built with no machine learning libraries at all, just to really understand what happens inside one. It learns to read handwritten digits and pictures of clothing. Written in Python with NumPy.",
-    images: ["/nn1.svg"],
+    images: ["/projects/neural-network/nn1.svg"],
     github: "https://github.com/ryjchen24/neural-network-from-scratch",
     color: "#141318",
     dark: true,
@@ -35,7 +35,7 @@ const projects: Project[] = [
   {
     title: "next-word predictor",
     description: "A small language model trained from the ground up that guesses the next word as you type. It runs behind a simple API that hands back its top few guesses. Built with Python, PyTorch, and FastAPI.",
-    images: ["/nwp1.svg"],
+    images: ["/projects/next-word-predictor/nwp1.svg"],
     github: "https://github.com/ryjchen24/next-word-predictor",
     color: "#273346",
     dark: true,
@@ -43,7 +43,7 @@ const projects: Project[] = [
   {
     title: "NYC ride demand forecasting",
     description: "A model that predicts how many Uber and Lyft rides New Yorkers will request across the city each hour. Trained on more than 70 million real trips plus weather and holiday data, then mapped out where and when demand spikes. Built in R with Tidymodels and XGBoost.",
-    images: ["/nyc1.svg", "/nyc2.svg", "/nyc3.svg"],
+    images: ["/projects/nyc-demand/nyc1.svg", "/projects/nyc-demand/nyc2.svg", "/projects/nyc-demand/nyc3.svg"],
     github: "https://github.com/ryjchen24/nyc-fhv-demand-forecasting",
     color: "#6ee7b7",
     gallery: true,
@@ -51,7 +51,7 @@ const projects: Project[] = [
   {
     title: "internship alert bot",
     description: "A Discord bot that watches internship trackers and company career boards, then pings me the moment a new CS internship I'm actually eligible for gets posted. Built with Python, discord.py, and REST APIs.",
-    images: ["/bot1.svg"],
+    images: ["/projects/internship-bot/bot1.svg"],
     github: "https://github.com/ryjchen24/internship-bot",
     color: "#334155",
     dark: true,
@@ -59,7 +59,7 @@ const projects: Project[] = [
   {
     title: "olympic swimming medal predictor",
     description: "An interactive R Shiny app that predicts Olympic swimming medals from an athlete's stats, letting you compare linear and LASSO regression models side by side. Built with R, Shiny, and glmnet.",
-    images: ["/swim1.svg"],
+    images: ["/projects/swim-predictor/swim1.svg"],
     github: "https://github.com/ryjchen24/r-olympic-swimming-predictor",
     color: "#ffffff",
   },
@@ -69,18 +69,10 @@ const experience: Project[] = [
   {
     title: "Ding Lab, UC Irvine: Undergraduate Researcher",
     description: "Computer vision software that watches microscope footage and follows the tiny beads attached to RNA molecules on its own, so the lab no longer has to find and track them by hand. Feb 2026 to present.",
-    images: ["/ding1.svg", "/ding2.svg", "/ding3.svg"],
+    images: ["/experience/ding-lab/ding1.svg", "/experience/ding-lab/ding2.svg", "/experience/ding-lab/ding3.svg"],
     github: "https://github.com/ryjchen24",
     color: "#fff4ec",
     gallery: true,
-  },
-  {
-    title: "Cress Creek Country Club: Swim Coach",
-    description: "Taught swimming to more than 200 kids ages 3 to 14, taking a lot of them from their very first time in the water all the way to the swim team. Jun 2022 to Jul 2025.",
-    images: ["/coach1.svg"],
-    github: "https://github.com/ryjchen24",
-    color: "#1e5f74",
-    dark: true,
   },
 ];
 
@@ -88,7 +80,7 @@ const hackathons: Project[] = [
   {
     title: "Muve",
     description: "A tool that tells you whether a home is actually livable for you before you ever tour it. You give it an address and describe what you need, and it pulls the listing photos, reads every one of them for things like entry stairs, tight doorways, and narrow hallways, and hands back a scored accessibility report. Built for IrvineHacks 2026 with React, TypeScript, and Google Gemini vision.",
-    images: ["/muve1.svg"],
+    images: ["/hackathons/muve/muve1.svg"],
     github: "https://github.com/ParzivalPerhaps/muve",
     color: "#2f6a7d",
     dark: true,
@@ -96,7 +88,7 @@ const hackathons: Project[] = [
   {
     title: "AlterEgo",
     description: "A future simulator that takes who you are today, your work, your hours, your ambitions, your fears, and walks it twenty years forward, then lets you talk to the person waiting at the other end in your own aged voice. You can rewind to any year, change one decision, and watch the rest of the timeline rewrite itself. Built for LA Hacks 2026 with React, FastAPI, Claude, ElevenLabs, and Gemini.",
-    images: ["/alterego1.svg"],
+    images: ["/hackathons/alterego/alterego1.svg"],
     github: "https://github.com/SVAH-X/AlterEgo",
     color: "#4c3d75",
     dark: true,
@@ -108,11 +100,11 @@ function Links({ project, dark }: { project: Project; dark: boolean }) {
   return (
     <div className="flex gap-5">
       <a href={project.github} target="_blank" rel="noreferrer" aria-label={`${project.title} on GitHub`}>
-        <img src="/github.svg" alt="" width="32" height="32" className={`transition hover:scale-125 ${filter}`} />
+        <img src="/icons/github.svg" alt="" width="32" height="32" className={`transition hover:scale-125 ${filter}`} />
       </a>
       {project.live && (
         <a href={project.live} target="_blank" rel="noreferrer" aria-label={`Visit ${project.title}`}>
-          <img src="/link-svgrepo-com.svg" alt="" width="32" height="32" className={`transition hover:scale-125 ${filter}`} />
+          <img src="/icons/link-svgrepo-com.svg" alt="" width="32" height="32" className={`transition hover:scale-125 ${filter}`} />
         </a>
       )}
     </div>
@@ -185,13 +177,13 @@ export default function Home() {
 
           <div className="mt-8 flex items-center gap-5">
             <a href="https://github.com/ryjchen24" target="_blank" rel="noreferrer" aria-label="GitHub">
-              <img src="/github.svg" alt="" width="32" height="32" className="invert transition hover:scale-125" />
+              <img src="/icons/github.svg" alt="" width="32" height="32" className="invert transition hover:scale-125" />
             </a>
             <a href="https://linkedin.com/in/ryan-chen-324v" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-              <img src="/iconmonstr-linkedin-3.svg" alt="" width="32" height="32" className="invert transition hover:scale-125" />
+              <img src="/icons/iconmonstr-linkedin-3.svg" alt="" width="32" height="32" className="invert transition hover:scale-125" />
             </a>
             <a href="mailto:ryanjchen24@gmail.com" aria-label="Email Ryan" className="group flex items-center gap-3">
-              <img src="/maildotru.svg" alt="" width="32" height="32" className="invert transition group-hover:scale-125" />
+              <img src="/icons/maildotru.svg" alt="" width="32" height="32" className="invert transition group-hover:scale-125" />
               <span className="max-w-0 overflow-hidden whitespace-nowrap text-sm opacity-0 transition-all duration-300 group-hover:max-w-64 group-hover:opacity-100 group-focus-within:max-w-64 group-focus-within:opacity-100">ryanjchen24@gmail.com</span>
             </a>
           </div>
@@ -201,7 +193,7 @@ export default function Home() {
           <h2 className="font-bold">Tech Stacks</h2>
           <div className="mt-5 flex items-center justify-around gap-3">
             {[{ logo: "python.svg", invert: false }, { logo: "pytorch.svg", invert: false }, { logo: "react-javascript-js-framework-facebook-svgrepo-com.svg", invert: false }, { logo: "fastapi.svg", invert: false }, { logo: "sql-database-generic-svgrepo-com.svg", invert: true }, { logo: "docker.svg", invert: false }].map(({ logo, invert }) => (
-              <img key={logo} src={`/${logo}`} alt="" width="42" height="42" className={`max-w-10 transition hover:scale-125 ${invert ? "invert" : ""}`} />
+              <img key={logo} src={`/icons/${logo}`} alt="" width="42" height="42" className={`max-w-10 transition hover:scale-125 ${invert ? "invert" : ""}`} />
             ))}
           </div>
         </div>
@@ -295,17 +287,17 @@ export default function Home() {
               (224) 239-0420
             </a>
             <a href="mailto:ryanjchen24@gmail.com" className="group flex items-center gap-3 text-lg hover:underline">
-              <img src="/maildotru.svg" alt="" width="28" height="28" className="invert transition group-hover:scale-125" />
+              <img src="/icons/maildotru.svg" alt="" width="28" height="28" className="invert transition group-hover:scale-125" />
               ryanjchen24@gmail.com
             </a>
           </div>
 
           <div className="mt-10 flex items-center justify-center gap-6">
             <a href="https://github.com/ryjchen24" target="_blank" rel="noreferrer" aria-label="GitHub">
-              <img src="/github.svg" alt="" width="32" height="32" className="invert transition hover:scale-125" />
+              <img src="/icons/github.svg" alt="" width="32" height="32" className="invert transition hover:scale-125" />
             </a>
             <a href="https://linkedin.com/in/ryan-chen-324v" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-              <img src="/iconmonstr-linkedin-3.svg" alt="" width="32" height="32" className="invert transition hover:scale-125" />
+              <img src="/icons/iconmonstr-linkedin-3.svg" alt="" width="32" height="32" className="invert transition hover:scale-125" />
             </a>
           </div>
         </div>
