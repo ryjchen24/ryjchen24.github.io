@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="AMO placeholder">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f3350"/>
+      <stop offset="100%" stop-color="#3f5e7d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#g)"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.10" stroke-width="2">
+    <path d="M0 250H1600M0 500H1600M0 750H1600M400 0V1000M800 0V1000M1200 0V1000"/>
+  </g>
+  <rect x="60" y="60" width="1480" height="880" rx="24" fill="none" stroke="#ffffff" stroke-opacity="0.28" stroke-width="4" stroke-dasharray="18 14"/>
+  <g fill="#ffffff" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="800" y="470" font-size="76" font-weight="700">AMO</text>
+    <text x="800" y="556" font-size="42" fill-opacity="0.75">Chat workspace</text>
+    <text x="800" y="646" font-size="30" fill-opacity="0.5" letter-spacing="6">PLACEHOLDER IMAGE</text>
+  </g>
+</svg>
