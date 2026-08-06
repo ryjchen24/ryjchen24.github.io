@@ -60,7 +60,7 @@ const projects: Project[] = [
   {
     title: "internship alert bot",
     description: "A Discord bot that watches internship trackers and company career boards, then pings me the moment a new CS internship I'm actually eligible for gets posted. Built with Python, discord.py, and REST APIs.",
-    images: ["/projects/internship-bot/bot1.svg"],
+    images: ["/projects/internship-bot/bot1.png"],
     github: "https://github.com/ryjchen24/internship-bot",
     color: "#334155",
     dark: true,
@@ -68,9 +68,15 @@ const projects: Project[] = [
   {
     title: "olympic swimming medal predictor",
     description: "An interactive R Shiny app that predicts Olympic swimming medals from an athlete's stats, letting you compare linear and LASSO regression models side by side. Built with R, Shiny, and glmnet.",
-    images: ["/projects/swim-predictor/swim1.svg"],
+    images: [
+      "/projects/swim-predictor/swim1.png",
+      "/projects/swim-predictor/swim2.png",
+      "/projects/swim-predictor/swim3.png",
+    ],
     github: "https://github.com/ryjchen24/r-olympic-swimming-predictor",
-    color: "#ffffff",
+    color: "#e8f0f8",
+    gallery: true,
+    contain: true,
   },
 ];
 
