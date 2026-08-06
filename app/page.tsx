@@ -158,7 +158,7 @@ export default function Home() {
         <a href="#contact" className="hover:underline">Contact</a>
       </nav>
 
-      <section id="top" className="flex min-h-screen flex-col items-center justify-center gap-8 bg-[#14161b] px-6 py-24 text-white">
+      <section id="top" className="flex min-h-screen flex-col items-center justify-center gap-8 bg-[#191c23] px-6 py-24 text-white">
         <div className="w-full max-w-2xl rounded-lg bg-[#0f1015] p-8 shadow-2xl sm:p-12">
           <h1 className="text-5xl font-semibold sm:text-6xl">Hi, I&apos;m Ryan</h1>
           <p className="mt-6 text-lg">A Computer Science student studying at UCI.</p>
@@ -187,7 +187,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="bio" className="flex min-h-screen flex-col items-center justify-center bg-[#14161b] px-6 py-28 text-white">
+      <section id="bio" className="flex min-h-screen flex-col items-center justify-center bg-[#191c23] px-6 py-28 text-white">
         <div className="w-full max-w-6xl rounded-lg bg-[#0f1015] p-8 shadow-2xl sm:p-12">
           <h2 className="text-4xl font-semibold sm:text-5xl">Bio</h2>
 
@@ -221,7 +221,7 @@ export default function Home() {
       </section>
 
       <section>
-        <Gradient from="#14161b" to="#4f6d7a" height="h-24" />
+        <Gradient from="#191c23" to="#4f6d7a" height="h-24" />
         <div id="projects" className="flex min-h-screen items-center justify-center bg-[#4f6d7a] px-6">
           <h2 className="text-center text-5xl font-semibold text-white sm:text-6xl">Projects</h2>
         </div>
@@ -246,9 +246,9 @@ export default function Home() {
         ))}
       </section>
 
-      <Gradient from={experience[experience.length - 1].color} to="#14161b" />
+      <Gradient from={experience[experience.length - 1].color} to="#191c23" />
 
-      <section id="contact" className="flex min-h-screen flex-col items-center justify-center bg-[#14161b] px-6 py-28 text-white">
+      <section id="contact" className="flex min-h-screen flex-col items-center justify-center bg-[#191c23] px-6 py-28 text-white">
         <div className="w-full max-w-2xl rounded-lg bg-[#0f1015] p-8 text-center shadow-2xl sm:p-12">
           <h2 className="text-4xl font-semibold sm:text-5xl">Contact</h2>
           <p className="mt-6 text-lg text-white/70">
