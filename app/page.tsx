@@ -183,13 +183,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-
-        <div className="w-full max-w-xl rounded-lg bg-[#0f1015] p-6 text-center">
-          <h2 className="font-bold">Awards</h2>
-          <p className="mt-4 text-sm leading-relaxed text-white/70">
-            AIME Qualifier (2025) · Two-time ICTM Illinois State Math two-person finalist, top 4 (2023, 2024)
-          </p>
-        </div>
       </section>
 
       <section id="bio" className="bg-[#14161b] px-6 pb-28 text-white">
@@ -205,23 +198,20 @@ export default function Home() {
 
             <div className="space-y-5 text-base leading-relaxed text-white/70">
               <p>
-                I&apos;m in my second year at UCI, on track to graduate in June 2028, and almost everything I build comes
-                out of being genuinely obsessed with machine learning and AI. I like starting from the bottom: I wrote a
-                neural network with no ML libraries at all just to watch the math actually move, then trained a small
-                language model from scratch to see it pick up language one token at a time.
+                Hi, I&apos;m Ryan! I&apos;m a Computer Science student at UC Irvine, originally from Naperville, IL. I
+                love all things AI and ML.
               </p>
               <p>
-                Right now I do computer vision research at the Ding Lab here at UCI, where I write software that follows
-                the tiny beads attached to RNA molecules through microscope footage so nobody has to track them by hand.
-                I&apos;m hoping to join another vision-focused lab this year and I&apos;m reviewing material now so I can
-                contribute from day one. On the side I&apos;m building AMO, an AI studying and note-taking platform, plus
-                another computer vision project, and keeping my DSA sharp for the 2027 cycle.
+                Right now I&apos;m getting ready for my second year at UCI. I&apos;m hoping to join another research lab
+                focused on computer vision, so I&apos;ve been reviewing material to make sure I can start contributing to
+                projects as soon as the year kicks off. I&apos;m also working on two projects of my own: AMO, an AI
+                powered note taking and studying app, and a separate computer vision project I&apos;m building on the
+                side.
               </p>
               <p>
-                Before all this I spent three summers coaching swim back in Illinois, teaching over 200 kids from their
-                first time in the water to the swim team, which is still the best thing I&apos;ve done for figuring out
-                how to explain something hard to someone who has never seen it. Happy to talk research, internships, or a
-                project you&apos;re stuck on.
+                On top of all that, I&apos;m keeping up with my DSA practice to get ready for the 2027 internship cycle.
+                When I&apos;m not coding, I love playing pickleball, swimming, playing poker, and hanging out with
+                friends.
               </p>
             </div>
           </div>
@@ -252,8 +242,8 @@ export default function Home() {
 
       <Gradient from={experience[experience.length - 1].color} to="#14161b" />
 
-      <section id="contact" className="bg-[#14161b] px-6 pb-28 text-white">
-        <div className="mx-auto w-full max-w-2xl rounded-lg bg-[#0f1015] p-8 text-center shadow-2xl sm:p-12">
+      <section id="contact" className="flex min-h-screen flex-col items-center justify-center bg-[#14161b] px-6 py-28 text-white">
+        <div className="w-full max-w-2xl rounded-lg bg-[#0f1015] p-8 text-center shadow-2xl sm:p-12">
           <h2 className="text-4xl font-semibold sm:text-5xl">Contact</h2>
           <p className="mt-6 text-lg text-white/70">
             Thanks for scrolling all the way down. Feel free to reach out about research, internships, or anything
