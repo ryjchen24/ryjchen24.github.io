@@ -119,8 +119,10 @@ function PhoneIcon() {
   );
 }
 
-function Gradient({ from, to }: { from: string; to: string }) {
-  return <div className="h-96" style={{ backgroundImage: `linear-gradient(to bottom, ${from}, ${to})` }} />;
+// `height` is a literal Tailwind class so JIT picks it up. Title panels use a
+// short fade so the section heading isn't stranded far below the section above.
+function Gradient({ from, to, height = "h-96" }: { from: string; to: string; height?: string }) {
+  return <div className={height} style={{ backgroundImage: `linear-gradient(to bottom, ${from}, ${to})` }} />;
 }
 
 function ProjectSection({ project }: { project: Project }) {
@@ -219,7 +221,7 @@ export default function Home() {
       </section>
 
       <section>
-        <Gradient from="#14161b" to="#4f6d7a" />
+        <Gradient from="#14161b" to="#4f6d7a" height="h-24" />
         <div id="projects" className="flex min-h-screen items-center justify-center bg-[#4f6d7a] px-6">
           <h2 className="text-center text-5xl font-semibold text-white sm:text-6xl">Projects</h2>
         </div>
@@ -229,7 +231,7 @@ export default function Home() {
             {projects[index + 1] && <Gradient from={project.gradientTo ?? project.color} to={projects[index + 1].color} />}
           </div>
         ))}
-        <Gradient from={projects[projects.length - 1].color} to={experience[0].color} />
+        <Gradient from={projects[projects.length - 1].color} to={experience[0].color} height="h-24" />
       </section>
 
       <section>
