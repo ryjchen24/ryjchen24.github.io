@@ -100,6 +100,25 @@ function Links({ project, dark }: { project: Project; dark: boolean }) {
   );
 }
 
+function PhoneIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width="28"
+      height="28"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className="transition group-hover:scale-125"
+    >
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+    </svg>
+  );
+}
+
 function Gradient({ from, to }: { from: string; to: string }) {
   return <div className="h-96" style={{ backgroundImage: `linear-gradient(to bottom, ${from}, ${to})` }} />;
 }
@@ -131,36 +150,16 @@ export default function Home() {
     <main>
       <nav className="fixed top-0 z-50 flex w-full gap-6 px-6 py-5 font-semibold text-white mix-blend-difference">
         <a href="#top" className="hover:underline">Home</a>
+        <a href="#bio" className="hover:underline">Bio</a>
         <a href="#projects" className="hover:underline">Projects</a>
         <a href="#experience" className="hover:underline">Experience</a>
+        <a href="#contact" className="hover:underline">Contact</a>
       </nav>
 
       <section id="top" className="flex min-h-screen flex-col items-center justify-center gap-8 bg-[#14161b] px-6 py-24 text-white">
         <div className="w-full max-w-2xl rounded-lg bg-[#0f1015] p-8 shadow-2xl sm:p-12">
-          <h1 className="text-5xl font-semibold sm:text-6xl">I&apos;m Ryan</h1>
+          <h1 className="text-5xl font-semibold sm:text-6xl">Hi, I&apos;m Ryan</h1>
           <p className="mt-6 text-lg">A Computer Science student studying at UCI.</p>
-
-          <div className="mt-8 space-y-5 text-base leading-relaxed text-white/70">
-            <p>
-              I&apos;m in my second year at UCI, on track to graduate in June 2028, and almost everything I build comes
-              out of being genuinely obsessed with machine learning and AI. I like starting from the bottom: I wrote a
-              neural network with no ML libraries at all just to watch the math actually move, then trained a small
-              language model from scratch to see it pick up language one token at a time.
-            </p>
-            <p>
-              Right now I do computer vision research at the Ding Lab here at UCI, where I write software that follows
-              the tiny beads attached to RNA molecules through microscope footage so nobody has to track them by hand.
-              I&apos;m hoping to join another vision-focused lab this year and I&apos;m reviewing material now so I can
-              contribute from day one. On the side I&apos;m building AMO, an AI studying and note-taking platform, plus
-              another computer vision project, and keeping my DSA sharp for the 2027 cycle.
-            </p>
-            <p>
-              Before all this I spent three summers coaching swim back in Illinois, teaching over 200 kids from their
-              first time in the water to the swim team, which is still the best thing I&apos;ve done for figuring out
-              how to explain something hard to someone who has never seen it. Happy to talk research, internships, or a
-              project you&apos;re stuck on.
-            </p>
-          </div>
 
           <div className="mt-8 flex items-center gap-5">
             <a href="https://github.com/ryjchen24" target="_blank" rel="noreferrer" aria-label="GitHub">
@@ -193,6 +192,42 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="bio" className="bg-[#14161b] px-6 pb-28 text-white">
+        <div className="mx-auto w-full max-w-6xl rounded-lg bg-[#0f1015] p-8 shadow-2xl sm:p-12">
+          <h2 className="text-4xl font-semibold sm:text-5xl">Bio</h2>
+
+          <div className="mt-10 grid items-start gap-10 lg:grid-cols-[1fr_3fr]">
+            <img
+              src="/profile.jpg"
+              alt="Ryan Chen"
+              className="w-full max-w-[240px] rounded-lg object-cover shadow-lg lg:max-w-none"
+            />
+
+            <div className="space-y-5 text-base leading-relaxed text-white/70">
+              <p>
+                I&apos;m in my second year at UCI, on track to graduate in June 2028, and almost everything I build comes
+                out of being genuinely obsessed with machine learning and AI. I like starting from the bottom: I wrote a
+                neural network with no ML libraries at all just to watch the math actually move, then trained a small
+                language model from scratch to see it pick up language one token at a time.
+              </p>
+              <p>
+                Right now I do computer vision research at the Ding Lab here at UCI, where I write software that follows
+                the tiny beads attached to RNA molecules through microscope footage so nobody has to track them by hand.
+                I&apos;m hoping to join another vision-focused lab this year and I&apos;m reviewing material now so I can
+                contribute from day one. On the side I&apos;m building AMO, an AI studying and note-taking platform, plus
+                another computer vision project, and keeping my DSA sharp for the 2027 cycle.
+              </p>
+              <p>
+                Before all this I spent three summers coaching swim back in Illinois, teaching over 200 kids from their
+                first time in the water to the swim team, which is still the best thing I&apos;ve done for figuring out
+                how to explain something hard to someone who has never seen it. Happy to talk research, internships, or a
+                project you&apos;re stuck on.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="projects">
         <Gradient from="#14161b" to="#4f6d7a" />
         <h2 className="bg-[#4f6d7a] px-6 py-20 text-center text-5xl font-semibold text-white sm:text-6xl">Projects</h2>
@@ -213,6 +248,38 @@ export default function Home() {
             {experience[index + 1] && <Gradient from={project.color} to={experience[index + 1].color} />}
           </div>
         ))}
+      </section>
+
+      <Gradient from={experience[experience.length - 1].color} to="#14161b" />
+
+      <section id="contact" className="bg-[#14161b] px-6 pb-28 text-white">
+        <div className="mx-auto w-full max-w-2xl rounded-lg bg-[#0f1015] p-8 text-center shadow-2xl sm:p-12">
+          <h2 className="text-4xl font-semibold sm:text-5xl">Contact</h2>
+          <p className="mt-6 text-lg text-white/70">
+            Thanks for scrolling all the way down. Feel free to reach out about research, internships, or anything
+            you&apos;re building.
+          </p>
+
+          <div className="mt-10 flex flex-col items-center gap-5">
+            <a href="tel:+12242390420" className="group flex items-center gap-3 text-lg hover:underline">
+              <PhoneIcon />
+              (224) 239-0420
+            </a>
+            <a href="mailto:ryanjchen24@gmail.com" className="group flex items-center gap-3 text-lg hover:underline">
+              <img src="/maildotru.svg" alt="" width="28" height="28" className="invert transition group-hover:scale-125" />
+              ryanjchen24@gmail.com
+            </a>
+          </div>
+
+          <div className="mt-10 flex items-center justify-center gap-6">
+            <a href="https://github.com/ryjchen24" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <img src="/github.svg" alt="" width="32" height="32" className="invert transition hover:scale-125" />
+            </a>
+            <a href="https://linkedin.com/in/ryan-chen-324v" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <img src="/iconmonstr-linkedin-3.svg" alt="" width="32" height="32" className="invert transition hover:scale-125" />
+            </a>
+          </div>
+        </div>
       </section>
     </main>
   );
