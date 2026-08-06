@@ -10,6 +10,7 @@ type Project = {
   gradientTo?: string;
   dark?: boolean;
   gallery?: boolean;
+  contain?: boolean;
 };
 
 const projects: Project[] = [
@@ -43,10 +44,18 @@ const projects: Project[] = [
   {
     title: "NYC ride demand forecasting",
     description: "A model that predicts how many Uber and Lyft rides New Yorkers will request across the city each hour. Trained on more than 70 million real trips plus weather and holiday data, then mapped out where and when demand spikes. Built in R with Tidymodels and XGBoost.",
-    images: ["/projects/nyc-demand/nyc1.svg", "/projects/nyc-demand/nyc2.svg", "/projects/nyc-demand/nyc3.svg"],
+    images: [
+      "/projects/nyc-demand/nyc1.png",
+      "/projects/nyc-demand/nyc2.png",
+      "/projects/nyc-demand/nyc3.png",
+      "/projects/nyc-demand/nyc4.png",
+      "/projects/nyc-demand/nyc5.png",
+      "/projects/nyc-demand/nyc6.png",
+    ],
     github: "https://github.com/ryjchen24/nyc-fhv-demand-forecasting",
     color: "#6ee7b7",
     gallery: true,
+    contain: true,
   },
   {
     title: "internship alert bot",
@@ -80,18 +89,24 @@ const hackathons: Project[] = [
   {
     title: "Muve",
     description: "A tool that tells you whether a home is actually livable for you before you ever tour it. You give it an address and describe what you need, and it pulls the listing photos, reads every one of them for things like entry stairs, tight doorways, and narrow hallways, and hands back a scored accessibility report. Built for IrvineHacks 2026 with React, TypeScript, and Google Gemini vision.",
-    images: ["/hackathons/muve/muve1.svg"],
+    images: ["/hackathons/muve/muve1.png", "/hackathons/muve/muve2.png", "/hackathons/muve/muve3.png"],
     github: "https://github.com/ParzivalPerhaps/muve",
-    color: "#2f6a7d",
-    dark: true,
+    color: "#8fdcae",
+    gallery: true,
   },
   {
     title: "AlterEgo",
     description: "A future simulator that takes who you are today, your work, your hours, your ambitions, your fears, and walks it twenty years forward, then lets you talk to the person waiting at the other end in your own aged voice. You can rewind to any year, change one decision, and watch the rest of the timeline rewrite itself. Built for LA Hacks 2026 with React, FastAPI, Claude, ElevenLabs, and Gemini.",
-    images: ["/hackathons/alterego/alterego1.svg"],
+    images: [
+      "/hackathons/alterego/alterego1.png",
+      "/hackathons/alterego/alterego2.png",
+      "/hackathons/alterego/alterego3.png",
+      "/hackathons/alterego/alterego4.png",
+    ],
     github: "https://github.com/SVAH-X/AlterEgo",
-    color: "#4c3d75",
+    color: "#17110f",
     dark: true,
+    gallery: true,
   },
 ];
 
@@ -142,7 +157,7 @@ function ProjectSection({ project }: { project: Project }) {
     <article className={dark ? "text-white" : "text-slate-950"} style={{ background: project.gradientTo ? `linear-gradient(to bottom, ${project.color}, ${project.gradientTo})` : project.color }}>
       <div className={`mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-[2fr_1fr] ${project.gallery ? "min-h-[50rem]" : "min-h-[32rem]"}`}>
         {project.gallery ? (
-          <PhotoGallery images={project.images} alt={`${project.title} screenshot`} />
+          <PhotoGallery images={project.images} alt={`${project.title} screenshot`} contain={project.contain} />
         ) : (
           <div className="flex justify-center">
             <img src={project.images[0]} alt={`${project.title} screenshot`} className="max-h-[500px] max-w-full rounded-md shadow-xl" />
@@ -260,8 +275,8 @@ export default function Home() {
       </section>
 
       <section>
-        <div id="hackathons" className="flex min-h-screen items-center justify-center bg-[#2f6a7d] px-6">
-          <h2 className="text-center text-5xl font-semibold text-white sm:text-6xl">Hackathons</h2>
+        <div id="hackathons" className="flex min-h-screen items-center justify-center bg-[#8fdcae] px-6">
+          <h2 className="text-center text-5xl font-semibold text-black/70 sm:text-6xl">Hackathons</h2>
         </div>
         {hackathons.map((project, index) => (
           <div key={project.title}>
