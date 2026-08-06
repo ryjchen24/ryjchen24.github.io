@@ -185,8 +185,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="bio" className="bg-[#14161b] px-6 pb-28 text-white">
-        <div className="mx-auto w-full max-w-6xl rounded-lg bg-[#0f1015] p-8 shadow-2xl sm:p-12">
+      <section id="bio" className="flex min-h-screen flex-col items-center justify-center bg-[#14161b] px-6 py-28 text-white">
+        <div className="w-full max-w-6xl rounded-lg bg-[#0f1015] p-8 shadow-2xl sm:p-12">
           <h2 className="text-4xl font-semibold sm:text-5xl">Bio</h2>
 
           <div className="mt-10 grid items-start gap-10 lg:grid-cols-[1fr_3fr]">
@@ -218,9 +218,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects">
+      <section>
         <Gradient from="#14161b" to="#4f6d7a" />
-        <h2 className="bg-[#4f6d7a] px-6 py-20 text-center text-5xl font-semibold text-white sm:text-6xl">Projects</h2>
+        <div id="projects" className="flex min-h-screen items-center justify-center bg-[#4f6d7a] px-6">
+          <h2 className="text-center text-5xl font-semibold text-white sm:text-6xl">Projects</h2>
+        </div>
         {projects.map((project, index) => (
           <div key={project.title}>
             <ProjectSection project={project} />
@@ -230,8 +232,10 @@ export default function Home() {
         <Gradient from={projects[projects.length - 1].color} to={experience[0].color} />
       </section>
 
-      <section id="experience">
-        <h2 className="bg-[#fff4ec] px-6 py-20 text-center text-5xl font-semibold text-black/70 sm:text-6xl">Experience</h2>
+      <section>
+        <div id="experience" className="flex min-h-screen items-center justify-center bg-[#fff4ec] px-6">
+          <h2 className="text-center text-5xl font-semibold text-black/70 sm:text-6xl">Experience</h2>
+        </div>
         {experience.map((project, index) => (
           <div key={project.title}>
             <ProjectSection project={project} />
