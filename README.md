@@ -2,6 +2,8 @@
 
 My personal site, built with Next.js, TypeScript, and Tailwind CSS.
 
+Live at **https://ryjchen24.github.io/**
+
 ## Running it
 
 ```bash
@@ -18,6 +20,13 @@ npm run start   # serve the production build
 - `app/layout.tsx` — page shell and metadata
 - `app/globals.css` — Tailwind entry point and base styles
 - `public/` — icons and project images
+
+## Deploying
+
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site
+and publishes it to GitHub Pages. `next.config.ts` sets `output: "export"`, so
+`npm run build` emits a fully static site into `out/` — that folder is what gets
+served, and it is gitignored rather than committed.
 
 ## Adding a project
 
