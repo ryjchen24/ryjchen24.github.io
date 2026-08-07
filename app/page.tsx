@@ -29,15 +29,22 @@ const projects: Project[] = [
   {
     title: "neural network from scratch",
     description: "A neural network built with no machine learning libraries at all, just to really understand what happens inside one. It learns to read handwritten digits and pictures of clothing. Written in Python with NumPy.",
-    images: ["/projects/neural-network/nn1.svg"],
+    images: [
+      "/projects/neural-network/nn1.png",
+      "/projects/neural-network/nn2.png",
+      "/projects/neural-network/nn3.png",
+      "/projects/neural-network/nn4.png",
+    ],
     github: "https://github.com/ryjchen24/neural-network-from-scratch",
     color: "#141318",
     dark: true,
+    gallery: true,
+    contain: true,
   },
   {
     title: "next-word predictor",
     description: "A small language model trained from the ground up that guesses the next word as you type. It runs behind a simple API that hands back its top few guesses. Built with Python, PyTorch, and FastAPI.",
-    images: ["/projects/next-word-predictor/nwp1.svg"],
+    images: ["/projects/next-word-predictor/nextword1.png"],
     github: "https://github.com/ryjchen24/next-word-predictor",
     color: "#273346",
     dark: true,
@@ -85,10 +92,9 @@ const experience: Project[] = [
   {
     title: "Ding Lab, UC Irvine: Undergraduate Researcher",
     description: "Computer vision software that watches microscope footage and follows the tiny beads attached to RNA molecules on its own, so the lab no longer has to find and track them by hand. Feb 2026 to present.",
-    images: ["/experience/ding-lab/ding1.svg", "/experience/ding-lab/ding2.svg", "/experience/ding-lab/ding3.svg"],
+    images: ["/experience/ding-lab/ding1.png"],
     github: "https://github.com/ryjchen24",
     color: "#fff4ec",
-    gallery: true,
   },
 ];
 
