@@ -101,7 +101,7 @@ const experience: Project[] = [
 const hackathons: Project[] = [
   {
     title: "Muve",
-    description: "A tool that scores houses based on their accessability needs. Give it an address and describe any disabilities or needs, and it pulls the listing photos, and hands back a scored accessibility report. Built for IrvineHacks 2026 with React and TypeScript and powered with Google Gemini vision.",
+    description: "A tool that scores houses based on their accessability needs. Give it an address and describe any disabilities or needs, and it pulls the listing photos, and hands back a scored accessibility report. Built for IrvineHacks 2026.",
     images: ["/hackathons/muve/muve1.png", "/hackathons/muve/muve2.png", "/hackathons/muve/muve3.png"],
     github: "https://github.com/ParzivalPerhaps/muve",
     color: "#8fdcae",
@@ -109,7 +109,7 @@ const hackathons: Project[] = [
   },
   {
     title: "AlterEgo",
-    description: "A future simulator that takes who you are today, your work, your hours, your ambitions, your fears, and walks it many years forward, then lets you talk to the person waiting at the other end in your own aged voice. You can rewind to any year, change one decision, and watch the rest of the timeline rewrite itself. Built for LA Hacks 2026 with React, FastAPI, Claude, ElevenLabs, and Gemini.",
+    description: "A future simulator that takes who you are today, your work, your hours, your ambitions, your fears, and walks it many years forward, then lets you talk to the person waiting at the other end in your own aged voice. You can rewind to any year, change one decision, and watch the rest of the timeline rewrite itself. Built for LA Hacks 2026.",
     images: [
       "/hackathons/alterego/alterego1.png",
       "/hackathons/alterego/alterego2.png",
@@ -240,7 +240,7 @@ export default function Home() {
 
             <div className="space-y-5 text-base leading-relaxed text-white/70">
               <p>
-                Hi, I&apos;m Ryan! I&apos;m a Computer Science student at UC Irvine, originally from Naperville, IL. I
+                Hi! I&apos;m Ryan! I&apos;m a Computer Science student at UC Irvine, originally from Naperville, IL. I
                 love all things AI and ML.
               </p>
               <p>
@@ -305,8 +305,7 @@ export default function Home() {
         <div className="w-full max-w-2xl rounded-lg bg-[#0f1015] p-8 text-center shadow-2xl sm:p-12">
           <h2 className="text-4xl font-semibold sm:text-5xl">Contact</h2>
           <p className="mt-6 text-lg text-white/70">
-            Thanks for scrolling all the way down. Feel free to reach out about research, internships, or anything
-            you&apos;re building.
+            Thanks for stopping by! If you want to get in touch, feel free to contact me.
           </p>
 
           <div className="mt-10 flex flex-col items-center gap-5">
