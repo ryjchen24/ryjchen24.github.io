@@ -16,7 +16,7 @@ type Project = {
 const projects: Project[] = [
   {
     title: "AMO",
-    description: "An AI studying and note-taking platform where you can chat with several models at once, drop in your own API keys, and sign in with Google, all in one place. Built with React, FastAPI, PostgreSQL, and Docker.",
+    description: "An AI studying and note-taking platform, think Google Docs and ChatGPT combined. Drop in your own API keys, and sign in with Google, and study better. Built with React, FastAPI, PostgreSQL, and Docker.",
     images: ["/projects/amo/amo1.png", "/projects/amo/amo2.png", "/projects/amo/amo3.png"],
     github: "https://github.com/ryjchen24",
     live: "https://amo-xt5x.onrender.com",
@@ -28,7 +28,7 @@ const projects: Project[] = [
   },
   {
     title: "neural network from scratch",
-    description: "A neural network built with no machine learning libraries at all, just to really understand what happens inside one. It learns to read handwritten digits and pictures of clothing. Written in Python with NumPy.",
+    description: "A neural network built with just numpy and calculations. Tested using MNIST-784 and Fashion MNIST, it benchmarks against equivalent PyTorch models within 1%.",
     images: [
       "/projects/neural-network/nn1.png",
       "/projects/neural-network/nn2.png",
@@ -91,7 +91,7 @@ const projects: Project[] = [
 const experience: Project[] = [
   {
     title: "Ding Lab, UC Irvine: Undergraduate Researcher",
-    description: "Computer vision software that watches microscope footage and follows the tiny beads attached to RNA molecules on its own, so the lab no longer has to find and track them by hand. Feb 2026 to present.",
+    description: "LabVIEW and C-based software that watches microscope footage and follows the tiny beads attached to RNA molecules. Writing pipelines to automate the tracking of RNA beads to reduce tracking time.",
     images: ["/experience/ding-lab/ding1.png"],
     github: "https://github.com/ryjchen24",
     color: "#fff4ec",
@@ -101,7 +101,7 @@ const experience: Project[] = [
 const hackathons: Project[] = [
   {
     title: "Muve",
-    description: "A tool that tells you whether a home is actually livable for you before you ever tour it. You give it an address and describe what you need, and it pulls the listing photos, reads every one of them for things like entry stairs, tight doorways, and narrow hallways, and hands back a scored accessibility report. Built for IrvineHacks 2026 with React, TypeScript, and Google Gemini vision.",
+    description: "A tool that scores houses based on their accessability needs. Give it an address and describe any disabilities or needs, and it pulls the listing photos, and hands back a scored accessibility report. Built for IrvineHacks 2026 with React and TypeScript and powered with Google Gemini vision.",
     images: ["/hackathons/muve/muve1.png", "/hackathons/muve/muve2.png", "/hackathons/muve/muve3.png"],
     github: "https://github.com/ParzivalPerhaps/muve",
     color: "#8fdcae",
@@ -109,7 +109,7 @@ const hackathons: Project[] = [
   },
   {
     title: "AlterEgo",
-    description: "A future simulator that takes who you are today, your work, your hours, your ambitions, your fears, and walks it twenty years forward, then lets you talk to the person waiting at the other end in your own aged voice. You can rewind to any year, change one decision, and watch the rest of the timeline rewrite itself. Built for LA Hacks 2026 with React, FastAPI, Claude, ElevenLabs, and Gemini.",
+    description: "A future simulator that takes who you are today, your work, your hours, your ambitions, your fears, and walks it many years forward, then lets you talk to the person waiting at the other end in your own aged voice. You can rewind to any year, change one decision, and watch the rest of the timeline rewrite itself. Built for LA Hacks 2026 with React, FastAPI, Claude, ElevenLabs, and Gemini.",
     images: [
       "/hackathons/alterego/alterego1.png",
       "/hackathons/alterego/alterego2.png",
