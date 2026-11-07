@@ -120,8 +120,7 @@ export default function Home() {
         <section className="hero" aria-label="Intro">
           <div>
             <p>
-              Hi! I&apos;m Ryan! I&apos;m a Computer Science student at UC Irvine, originally from Naperville, IL. I
-              love all things AI and ML.
+              Hi! I&apos;m Ryan! I&apos;m a Computer Science student at UC Irvine, originally from Naperville, IL.
             </p>
             <p>
               Right now I&apos;m a second year at UCI. I love coding, playing poker and pickleball, swimming, and hanging out with my friends. I&apos;m interested in AI/ML and startup culture. Please feel free to reach out or connect!
