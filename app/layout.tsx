@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
+import { IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-mono",
+});
+
 export const metadata: Metadata = {
-  title: "Ryan Chen | Portfolio",
-  description: "Ryan Chen's machine learning, computer vision, and full-stack projects.",
+  title: "Ryan Chen",
+  description: "Personal site for Ryan Chen",
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
@@ -13,7 +20,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={plexMono.variable}>{children}</body>
     </html>
   );
 }

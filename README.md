@@ -1,6 +1,6 @@
 # Personal Website
 
-My personal site, built with Next.js, TypeScript, and Tailwind CSS.
+My personal site, built with Next.js and TypeScript, styled with plain CSS.
 
 Live at **https://ryjchen24.github.io/**
 
@@ -15,10 +15,10 @@ npm run start   # serve the production build
 
 ## Files
 
-- `app/page.tsx` — all page content: the intro card, the `projects` array, and the `experience` array
-- `app/photo-gallery.tsx` — client component for the multi-image project galleries
-- `app/layout.tsx` — page shell and metadata
-- `app/globals.css` — Tailwind entry point and base styles
+- `app/page.tsx` — all page content: the bio, and the `experience`, `projects`, and `hackathons` arrays
+- `app/entry-item.tsx` — client component for one list entry, including its expandable screenshots
+- `app/layout.tsx` — page shell, metadata, and the IBM Plex Mono font
+- `app/globals.css` — all styles
 - `public/` — icons and project images
 
 ## Deploying
@@ -30,12 +30,6 @@ served, and it is gitignored rather than committed.
 
 ## Adding a project
 
-Append an entry to the `projects` array in `app/page.tsx`. Each section's
-background flows into the next, so a project's `color` should match the
-previous section's ending color (`gradientTo` if set, otherwise `color`).
-Set `gallery: true` for entries with more than one image.
-
-## Images
-
-The project screenshots in `public/` are placeholders (`amo1.svg`, `nn1.svg`,
-and so on). Replace them with real screenshots and update the `images` paths.
+Append an entry to `experience`, `projects`, or `hackathons` in `app/page.tsx`.
+`meta` is the small monospace line above the title, `links` render as the
+`GitHub · Website` row, and `images` (optional) appear behind an "Images" link.
