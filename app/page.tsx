@@ -124,16 +124,7 @@ export default function Home() {
               love all things AI and ML.
             </p>
             <p>
-              Right now I&apos;m getting ready for my second year at UCI. I&apos;m hoping to join another research lab
-              focused on computer vision, so I&apos;ve been reviewing material to make sure I can start contributing to
-              projects as soon as the year kicks off. I&apos;m also working on two projects of my own: AMO, an AI
-              powered note taking and studying app, and a separate computer vision project I&apos;m building on the
-              side.
-            </p>
-            <p>
-              On top of all that, I&apos;m keeping up with my DSA practice to get ready for the 2027 internship cycle.
-              When I&apos;m not coding, I love playing pickleball, swimming, playing poker, and hanging out with
-              friends.
+              Right now I&apos;m a second year at UCI. I love coding, playing poker and pickleball, swimming, and hanging out with my friends. I&apos;m interested in AI/ML and startup culture. Please feel free to reach out or connect!
             </p>
             <p className="contact">ryanjchen24[at]gmail[dot]com</p>
             <nav aria-label="Social links">
