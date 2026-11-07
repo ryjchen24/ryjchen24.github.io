@@ -57,7 +57,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--focus-ring); ou
 /* Hero */
 .hero {
   grid-template-columns: minmax(0, 1.7fr) minmax(220px, 1fr);
-  align-items: start;
+  align-items: center;
   gap: clamp(20px, 2.8vw, 30px);
   display: grid;
 }
